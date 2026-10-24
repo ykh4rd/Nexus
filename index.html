@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#d9efff">
+<title>Nexa Vanilla — Números virtuais</title>
+<style>
+:root{--bg:#f2f9ff;--surface:#ffffff;--ink:#123f78;--muted:#52739a;--accent:#ffd64d;--accent2:#f2bd2e;--line:#c5e3ff;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,#d9efff 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.04em;font-size:1.25rem}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:15px;background:var(--accent);font-weight:900}.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{color:var(--muted);text-decoration:none;font-size:.94rem}.btn{border:0;border-radius:14px;padding:12px 17px;font-weight:750;background:var(--accent);color:#2b2818;transition:.18s}.btn:hover{transform:translateY(-1px);background:var(--accent2);box-shadow:0 5px 14px #123f7818}.btn.secondary{background:transparent;border:1px solid var(--line)}.hero{padding:68px 0 50px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);padding:7px 12px;border-radius:999px;color:var(--muted);font-size:.83rem;font-weight:700}.dot{width:8px;height:8px;background:#8aaf69;border-radius:50%}h1{font-size:clamp(2.7rem,6vw,4.8rem);line-height:.99;letter-spacing:-.065em;margin:22px 0}h1 span{color:#f2c735}.hero p{font-size:1.08rem;color:var(--muted);max-width:520px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.hero-art{background:linear-gradient(145deg,#d9efff 0%,#edf7ff 58%,#fff1b8 100%);border:1px solid var(--line);border-radius:32px;padding:25px;min-height:330px;display:grid;place-items:center;position:relative;overflow:hidden}.orb{width:210px;height:210px;border-radius:50%;background:linear-gradient(135deg,#b9e1ff 0%,#82c5ff 58%,#ffdf65 100%);display:grid;place-items:center;box-shadow:0 22px 55px #d6bf5a55}.phone{width:118px;height:175px;border:7px solid #123f78;border-radius:25px;background:#fffdf4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transform:rotate(-8deg)}.phone .screen-dot{width:42px;height:42px;background:var(--accent);border-radius:15px;display:grid;place-items:center;font-size:1.4rem}.phone-lines{width:56px;height:6px;border-radius:9px;background:#a8d9ff}.floating{position:absolute;background:#fbfdff;border:1px solid var(--line);border-radius:15px;padding:11px 14px;font-weight:750;box-shadow:0 12px 30px #4e441511}.float1{top:27px;left:20px}.float2{right:20px;bottom:30px}.section{padding:42px 0 70px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.section h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.05em;margin:0}.section-head p{color:var(--muted);margin:7px 0 0}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:linear-gradient(145deg,#ffffff 0%,#f8fcff 100%);border:1px solid var(--line);box-shadow:0 3px 0 #dcefff;border-radius:var(--radius);padding:23px;display:flex;flex-direction:column;min-height:280px}.product-icon{width:52px;height:52px;border-radius:17px;background:linear-gradient(145deg,#d4ecff,#9ed3ff);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}.product h3{margin:0 0 6px;font-size:1.2rem}.product p{margin:0;color:var(--muted);font-size:.94rem;flex:1}.price-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}.price{font-size:1.45rem;font-weight:850;letter-spacing:-.04em}.mini{font-size:.78rem;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#ffffff,#f7fbff)}.stepnum{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#123f78;display:grid;place-items:center;font-weight:850;margin-bottom:14px}.step h3{margin:0 0 7px}.step p{margin:0;color:var(--muted);font-size:.94rem}.banner{background:linear-gradient(110deg,#b8ddff 0%,#d6ecff 55%,#a9d7ff 100%);border:1px solid #9bcfff;border-radius:28px;padding:30px;box-shadow:0 5px 0 #e1f1ff;display:flex;align-items:center;justify-content:space-between;gap:20px}.banner h2{margin:0 0 6px}.banner p{margin:0;color:#234f80}.banner .btn{background:#fff9df;border:1px solid #8bbff0;color:#123f78}.footer{padding:28px 0 40px;border-top:1px solid var(--line);background:#e8f5ff;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.empty{grid-column:1/-1;padding:30px;border:1px dashed var(--line);border-radius:18px;text-align:center;color:var(--muted)}
+/* editor */
+.editor-toggle{position:fixed;right:16px;bottom:16px;z-index:20;box-shadow:0 8px 25px #29250f22}.editor{position:fixed;z-index:19;right:14px;top:14px;bottom:82px;width:min(390px,calc(100vw - 28px));background:#fbfdff;border:1px solid #c9e5f7;border-radius:22px;box-shadow:0 20px 70px #29250f30;display:none;overflow:hidden}.editor.open{display:flex;flex-direction:column}.editor-head{padding:17px 18px;background:#e7f4ff;border-bottom:1px solid #c9e5f7;display:flex;justify-content:space-between;align-items:center}.editor-head h2{font-size:1.1rem;margin:0}.editor-body{padding:16px;overflow:auto}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-size:.83rem;font-weight:750;color:#4d6578}.field input,.field textarea,.field select{width:100%;border:1px solid #c9e5f7;border-radius:11px;padding:10px 11px;background:#ffffff;color:#282719}.field textarea{min-height:74px;resize:vertical}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.editor-section{border-top:1px solid #c9e5f7;padding-top:16px;margin-top:16px}.editor-section h3{font-size:.94rem;margin:0 0 12px}.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.editor-actions .btn{font-size:.85rem;padding:10px 12px}.product-edit{border:1px solid #c9e5f7;border-radius:14px;padding:12px;margin-bottom:10px}.product-edit-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-weight:800}.small-btn{border:1px solid #c9e5f7;background:#f3faff;border-radius:9px;padding:6px 9px;font-size:.8rem}.notice{font-size:.8rem;color:#647789;margin:10px 0}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#282719;color:white;border-radius:12px;padding:10px 15px;z-index:30;display:none;max-width:90%;font-size:.9rem}
+@media(max-width:760px){.nav{height:66px}.navlinks a{display:none}.hero{padding-top:42px}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:270px}.orb{width:175px;height:175px}.products,.steps{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.banner{align-items:start;flex-direction:column}.product{min-height:250px}h1{font-size:3.2rem}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <div class="brand"><div class="logo" id="logoMark">N</div><span id="brandName">Nexa Vanilla</span></div>
+  <nav class="navlinks"><a href="#produtos">Produtos</a><a href="#como-funciona">Como funciona</a><a href="#contato">Contato</a></nav>
+  <a class="btn" href="#produtos" style="text-decoration:none">Ver números</a>
+</div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div><div class="eyebrow"><span class="dot"></span><span id="eyebrowText">Sua conexão, do seu jeito</span></div>
+    <h1 id="heroTitle">Números virtuais.<br><span>Simples assim.</span></h1>
+    <p id="heroText">Encontre a opção ideal para você com um atendimento prático e transparente.</p>
+    <div class="hero-actions"><a class="btn" href="#produtos" style="text-decoration:none" id="heroButton">Explorar produtos</a><a class="btn secondary" href="#como-funciona" style="text-decoration:none">Como funciona</a></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustração decorativa"><div class="floating float1" id="floatLabel1">✨ Fácil de escolher</div><div class="orb"><div class="phone"><div class="screen-dot">N</div><div class="phone-lines"></div><div class="phone-lines" style="width:42px"></div></div></div><div class="floating float2" id="floatLabel2">💛 Atendimento humano</div></div>
+</div></section>
+<section class="section" id="produtos"><div class="wrap">
+  <div class="section-head"><div><h2 id="productsTitle">Escolha sua opção</h2><p id="productsSubtitle">Confira os produtos disponíveis na Nexa Vanilla.</p></div><span class="mini" id="productsNote">Preços exibidos em reais (R$)</span></div>
+  <div class="products" id="productGrid"></div>
+</div></section>
+<section class="section" id="como-funciona"><div class="wrap">
+  <div class="section-head"><div><h2 id="stepsTitle">Como funciona</h2><p id="stepsSubtitle">Um processo simples, com informações claras.</p></div></div>
+  <div class="steps" id="stepsGrid">
+    <article class="step"><div class="stepnum">1</div><h3>Escolha</h3><p>Veja os detalhes e escolha o produto que atende à sua necessidade.</p></article>
+    <article class="step"><div class="stepnum">2</div><h3>Confirme</h3><p>Fale com a loja para confirmar disponibilidade, condições e valor final.</p></article>
+    <article class="step"><div class="stepnum">3</div><h3>Receba as instruções</h3><p>Após a confirmação do pagamento, siga as orientações combinadas.</p></article>
+  </div>
+</div></section>
+<section class="section" id="contato"><div class="wrap"><div class="banner"><div><h2 id="bannerTitle">Precisa de ajuda?</h2><p id="bannerText">Fale com a Nexa Vanilla pelo WhatsApp.</p></div><a class="btn" id="contactButton" href="#" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-row"><span>© <span id="year"></span> <span id="footerBrand">Nexa Vanilla</span>. Todos os direitos reservados.</span><span id="footerText">Atendimento sujeito à disponibilidade dos produtos.</span></div></footer>
+
+<button class="btn editor-toggle" id="toggleEditor">⚙ Editar loja</button>
+<aside class="editor" id="editor" aria-label="Painel de edição">
+  <div class="editor-head"><h2>⚙ Personalizar Nexa Vanilla</h2><button class="small-btn" id="closeEditor">Fechar ✕</button></div>
+  <div class="editor-body">
+    <p class="notice">As alterações ficam salvas neste navegador/celular. Para aparecerem para clientes, publique o arquivo atualizado depois de editar.</p>
+    <div class="editor-section" style="border-top:0;padding-top:0;margin-top:0"><h3>Identidade e textos</h3>
+      <div class="field"><label for="editName">Nome da loja</label><input id="editName" value="Nexa Vanilla"></div>
+      <div class="field"><label for="editEyebrow">Texto pequeno do topo</label><input id="editEyebrow" value="Sua conexão, do seu jeito"></div>
+      <div class="field"><label for="editHeroTitle">Título principal (use | para quebrar linha)</label><input id="editHeroTitle" value="Números virtuais.|Simples assim."></div>
+      <div class="field"><label for="editHeroText">Descrição principal</label><textarea id="editHeroText">Encontre a opção ideal para você com um atendimento prático e transparente.</textarea></div>
+      <div class="field"><label for="editProductsTitle">Título dos produtos</label><input id="editProductsTitle" value="Escolha sua opção"></div>
+      <div class="field"><label for="editProductsSubtitle">Subtítulo dos produtos</label><input id="editProductsSubtitle" value="Confira os produtos disponíveis na Nexa Vanilla."></div>
+      <div class="editor-section"><h3>Como funciona — textos</h3>
+        <div class="field"><label for="editStepsTitle">Título da seção</label><input id="editStepsTitle" value="Como funciona"></div>
+        <div class="field"><label for="editStepsSubtitle">Subtítulo da seção</label><textarea id="editStepsSubtitle">Um processo simples, com informações claras.</textarea></div>
+        <div class="field"><label for="editStep1Title">Etapa 1 — título</label><input id="editStep1Title" value="Escolha"></div>
+        <div class="field"><label for="editStep1Text">Etapa 1 — descrição</label><textarea id="editStep1Text">Veja os detalhes e escolha o produto que atende à sua necessidade.</textarea></div>
+        <div class="field"><label for="editStep2Title">Etapa 2 — título</label><input id="editStep2Title" value="Confirme"></div>
+        <div class="field"><label for="editStep2Text">Etapa 2 — descrição</label><textarea id="editStep2Text">Fale com a loja para confirmar disponibilidade, condições e valor final.</textarea></div>
+        <div class="field"><label for="editStep3Title">Etapa 3 — título</label><input id="editStep3Title" value="Receba as instruções"></div>
+        <div class="field"><label for="editStep3Text">Etapa 3 — descrição</label><textarea id="editStep3Text">Após a confirmação do pagamento, siga as orientações combinadas.</textarea></div>
+      </div>
+      <div class="field"><label for="editBannerTitle">Título do banner de contato</label><input id="editBannerTitle" value="Precisa de ajuda?"></div>
+      <div class="field"><label for="editBannerText">Texto do banner</label><textarea id="editBannerText">Fale com a Nexa Vanilla pelo WhatsApp.</textarea></div>
+      <div class="field"><label for="editFooterText">Texto do rodapé</label><input id="editFooterText" value="Atendimento sujeito à disponibilidade dos produtos."></div>
+    </div>
+    <div class="editor-section"><h3>Visual e cores</h3>
+      <div class="field-row">
+        <div class="field"><label for="editBg">Fundo do site</label><input id="editBg" type="color" value="#eaf5ff"></div>
+        <div class="field"><label for="editSurface">Fundo dos cartões</label><input id="editSurface" type="color" value="#d5eaff"></div>
+        <div class="field"><label for="editAccent">Cor de destaque</label><input id="editAccent" type="color" value="#f5d34a"></div>
+        <div class="field"><label for="editInk">Cor do texto</label><input id="editInk" type="color" value="#17324d"></div>
+      </div>
+      <div class="field"><label for="editBanner">Texto do selo flutuante</label><input id="editBanner" value="✨ Fácil de escolher"></div>
+      <div class="field"><label for="editFloat2">Segundo selo flutuante</label><input id="editFloat2" value="💛 Atendimento humano"></div>
+      <div class="field"><label for="editLogo">Letra/símbolo do logotipo</label><input id="editLogo" maxlength="3" value="N"></div>
+      <div class="field"><label for="editBannerImage">Trocar imagem do banner</label><input id="editBannerImage" type="file" accept="image/*"><span class="notice">Escolha uma imagem da galeria do celular (até 1,5 MB). Para voltar à ilustração original, use “Remover imagem”.</span><button class="small-btn" type="button" id="removeBannerImage">Remover imagem</button></div>
+    </div>
+    <div class="editor-section"><h3>WhatsApp e PIX</h3>
+      <div class="field"><label for="editWhats">WhatsApp com código do país (ex.: 5511999999999)</label><input id="editWhats" inputmode="numeric" placeholder="5511999999999"></div>
+      <div class="field"><label for="editPix">Chave PIX (opcional; exibida na confirmação)</label><input id="editPix" placeholder="Digite sua chave PIX"></div>
+      <div class="field"><label for="editPixName">Nome do recebedor PIX</label><input id="editPixName" placeholder="Nome do titular"></div>
+      <p class="notice">Este modelo não processa pagamentos automaticamente. O cliente confirma o pedido pelo WhatsApp; confira o recebimento no seu banco antes de entregar.</p>
+    </div>
+    <div class="editor-section"><h3>Produtos e preços</h3><div id="productEditor"></div>
+      <button class="btn" id="addProduct">＋ Adicionar produto</button>
+    </div>
+    <div class="editor-actions"><button class="btn" id="saveSettings">Salvar alterações</button><button class="btn secondary" id="exportSettings">Exportar configuração</button><button class="btn secondary" id="resetSettings">Restaurar exemplo</button></div>
+    <div class="field"><label for="importFile">Importar configuração salva (JSON)</label><input id="importFile" type="file" accept=".json,application/json"></div>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+<script>
+const defaultData={
+ name:"Nexa Vanilla",eyebrow:"Sua conexão, do seu jeito",heroTitle:"Números virtuais.|Simples assim.",heroText:"Encontre a opção ideal para você com um atendimento prático e transparente.",
+ productsTitle:"Escolha sua opção",productsSubtitle:"Confira os produtos disponíveis na Nexa Vanilla.",stepsTitle:"Como funciona",stepsSubtitle:"Um processo simples, com informações claras.",steps:[{title:"Escolha",text:"Veja os detalhes e escolha o produto que atende à sua necessidade."},{title:"Confirme",text:"Fale com a loja para confirmar disponibilidade, condições e valor final."},{title:"Receba as instruções",text:"Após a confirmação do pagamento, siga as orientações combinadas."}],bannerTitle:"Precisa de ajuda?",bannerText:"Fale com a Nexa Vanilla pelo WhatsApp.",footerText:"Atendimento sujeito à disponibilidade dos produtos.",
+ bg:"#eaf5ff",surface:"#d5eaff",accent:"#f5d34a",ink:"#17324d",float1:"✨ Fácil de escolher",float2:"💛 Atendimento humano",logo:"N",bannerImage:"",whats:"",pix:"",pixName:"",
+ products:[
+ {id:1,icon:"📱",name:"Número virtual básico",description:"Uma opção inicial para conhecer o serviço. Confirme a finalidade e a disponibilidade antes de comprar.",price:9.90,tag:"Opção inicial"},
+ {id:2,icon:"🌟",name:"Número virtual premium",description:"Uma alternativa para quem busca uma opção diferenciada. Consulte os detalhes com o atendimento.",price:19.90,tag:"Mais opções"},
+ {id:3,icon:"💛",name:"Pacote personalizado",description:"Conte ao atendimento o que você precisa para consultar as opções disponíveis.",price:29.90,tag:"Sob consulta"}
+ ]
+};
+let data=loadData();
+function loadData(){try{return {...structuredClone(defaultData),...JSON.parse(localStorage.getItem("nexaVanillaData")||"{}")}}catch(e){return structuredClone(defaultData)}}
+function money(v){return Number(v||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",2500)}
+function render(){
+ document.documentElement.style.setProperty("--bg",data.bg);document.documentElement.style.setProperty("--surface",data.surface);document.documentElement.style.setProperty("--accent",data.accent);document.documentElement.style.setProperty("--accent2",data.accent);document.documentElement.style.setProperty("--ink",data.ink);
+ document.getElementById("brandName").textContent=data.name;document.getElementById("footerBrand").textContent=data.name;document.getElementById("logoMark").textContent=data.logo||"N";
+ document.getElementById("eyebrowText").textContent=data.eyebrow;document.getElementById("heroTitle").innerHTML=esc(data.heroTitle).split("|").map((x,i)=>i===1?`<span>${x}</span>`:x).join("<br>");
+ document.getElementById("heroText").textContent=data.heroText;document.getElementById("productsTitle").textContent=data.productsTitle;document.getElementById("productsSubtitle").textContent=data.productsSubtitle;document.getElementById("stepsTitle").textContent=data.stepsTitle||"Como funciona";document.getElementById("stepsSubtitle").textContent=data.stepsSubtitle||"Um processo simples, com informações claras.";
+ const stepRoot=document.getElementById("stepsGrid");stepRoot.innerHTML="";(data.steps||defaultData.steps).forEach((step,i)=>{const article=document.createElement("article");article.className="step";article.innerHTML=`<div class="stepnum">${i+1}</div><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p>`;stepRoot.appendChild(article)});document.getElementById("bannerTitle").textContent=data.bannerTitle;document.getElementById("bannerText").textContent=data.bannerText;document.getElementById("footerText").textContent=data.footerText;document.getElementById("floatLabel1").textContent=data.float1;document.getElementById("floatLabel2").textContent=data.float2;document.getElementById("year").textContent=new Date().getFullYear();
+ const art=document.querySelector(".hero-art"); if(data.bannerImage){art.style.backgroundImage=`linear-gradient(#fff9d966,#fff9d966),url("${data.bannerImage}")`;art.style.backgroundSize="cover";art.style.backgroundPosition="center";art.querySelectorAll(".floating,.orb").forEach(el=>el.style.display="none")}else{art.style.backgroundImage="";art.querySelectorAll(".floating,.orb").forEach(el=>el.style.display="")}
+ const grid=document.getElementById("productGrid");grid.innerHTML="";
+ if(!data.products.length)grid.innerHTML='<div class="empty">Nenhum produto cadastrado. Abra “Editar loja” para adicionar um.</div>';
+ data.products.forEach(p=>{const card=document.createElement("article");card.className="product";card.innerHTML=`<div class="product-icon">${esc(p.icon||"✨")}</div><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p><div class="price-row"><div><div class="price">${money(p.price)}</div><div class="mini">${esc(p.tag||"Disponível sob consulta")}</div></div><button class="btn order-btn">Pedir</button></div>`;card.querySelector("button").addEventListener("click",()=>orderProduct(p));grid.appendChild(card)});
+ const href=data.whats.replace(/\D/g,"");document.getElementById("contactButton").href=href?`https://wa.me/${href}?text=${encodeURIComponent("Olá! Vim pelo site "+data.name+" e gostaria de informações.")}`:"#";
+ document.getElementById("contactButton").onclick=e=>{if(!href){e.preventDefault();toast("Configure seu número de WhatsApp no painel Editar loja.");}};
+}
+function orderProduct(p){const message=`Olá! Tenho interesse em: ${p.name}\nPreço anunciado: ${money(p.price)}\nGostaria de confirmar disponibilidade e detalhes.`+(data.pix?`\nChave PIX informada pela loja: ${data.pix}`:"")+(data.pixName?`\nTitular informado: ${data.pixName}`:"");const phone=data.whats.replace(/\D/g,"");if(phone)window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,"_blank","noopener");else{navigator.clipboard?.writeText(message);toast("Configure o WhatsApp no painel. Texto do pedido preparado.");}}
+function syncEditor(){
+ const map={editName:"name",editEyebrow:"eyebrow",editHeroTitle:"heroTitle",editHeroText:"heroText",editProductsTitle:"productsTitle",editProductsSubtitle:"productsSubtitle",editStepsTitle:"stepsTitle",editStepsSubtitle:"stepsSubtitle",editBannerTitle:"bannerTitle",editBannerText:"bannerText",editFooterText:"footerText",editBg:"bg",editSurface:"surface",editAccent:"accent",editInk:"ink",editBanner:"float1",editFloat2:"float2",editLogo:"logo",editWhats:"whats",editPix:"pix",editPixName:"pixName"};
+ Object.entries(map).forEach(([id,key])=>{const el=document.getElementById(id);if(el)el.value=data[key]??""});
+ (data.steps||defaultData.steps).forEach((step,i)=>{const title=document.getElementById(`editStep${i+1}Title`),desc=document.getElementById(`editStep${i+1}Text`);if(title)title.value=step.title;if(desc)desc.value=step.text});
+ renderProductEditor();
+}
+function renderProductEditor(){
+ const root=document.getElementById("productEditor");root.innerHTML="";
+ data.products.forEach((p,i)=>{const box=document.createElement("div");box.className="product-edit";box.innerHTML=`<div class="product-edit-top"><span>Produto ${i+1}</span><button class="small-btn remove">Excluir</button></div>
+ <div class="field-row"><div class="field"><label>Ícone/emoji</label><input data-k="icon" value="${esc(p.icon)}"></div><div class="field"><label>Preço (R$)</label><input data-k="price" type="number" min="0" step="0.01" value="${Number(p.price)||0}"></div></div>
+ <div class="field"><label>Nome do produto</label><input data-k="name" value="${esc(p.name)}"></div>
+ <div class="field"><label>Descrição</label><textarea data-k="description">${esc(p.description)}</textarea></div>
+ <div class="field"><label>Etiqueta pequena</label><input data-k="tag" value="${esc(p.tag||"")}" placeholder="Ex.: Mais vendido"></div>`;
+ box.querySelector(".remove").onclick=()=>{data.products.splice(i,1);renderProductEditor();render();};box.querySelectorAll("[data-k]").forEach(el=>el.addEventListener("input",()=>{p[el.dataset.k]=el.dataset.k==="price"?Number(el.value):el.value;render()}));root.appendChild(box)});
+}
+function collectSettings(){const map={editName:"name",editEyebrow:"eyebrow",editHeroTitle:"heroTitle",editHeroText:"heroText",editProductsTitle:"productsTitle",editProductsSubtitle:"productsSubtitle",editStepsTitle:"stepsTitle",editStepsSubtitle:"stepsSubtitle",editBannerTitle:"bannerTitle",editBannerText:"bannerText",editFooterText:"footerText",editBg:"bg",editSurface:"surface",editAccent:"accent",editInk:"ink",editBanner:"float1",editFloat2:"float2",editLogo:"logo",editWhats:"whats",editPix:"pix",editPixName:"pixName"};Object.entries(map).forEach(([id,key])=>{const el=document.getElementById(id);if(el)data[key]=el.value.trim()});data.steps=[1,2,3].map(i=>({title:document.getElementById(`editStep${i}Title`).value.trim(),text:document.getElementById(`editStep${i}Text`).value.trim()}));}
+document.getElementById("editBannerImage").onchange=async e=>{const file=e.target.files[0];if(!file)return;if(file.size>1.5*1024*1024){toast("Escolha uma imagem de até 1,5 MB.");e.target.value="";return;}if(!file.type.startsWith("image/")){toast("Escolha um arquivo de imagem.");return;}const reader=new FileReader();reader.onload=()=>{data.bannerImage=reader.result;render();toast("Imagem do banner aplicada. Clique em Salvar alterações para guardar.")};reader.readAsDataURL(file);};
+document.getElementById("removeBannerImage").onclick=()=>{data.bannerImage="";document.getElementById("editBannerImage").value="";render();toast("Ilustração original restaurada. Clique em Salvar alterações.")};
+document.getElementById("toggleEditor").onclick=()=>{document.getElementById("editor").classList.add("open");syncEditor()};
+document.getElementById("closeEditor").onclick=()=>document.getElementById("editor").classList.remove("open");
+document.getElementById("saveSettings").onclick=()=>{collectSettings();try{localStorage.setItem("nexaVanillaData",JSON.stringify(data));render();toast("Alterações salvas neste navegador!")}catch(e){toast("Não foi possível salvar neste navegador.")}};
+document.getElementById("addProduct").onclick=()=>{data.products.push({id:Date.now(),icon:"✨",name:"Novo produto",description:"Escreva aqui os detalhes do produto.",price:0,tag:"Disponível sob consulta"});renderProductEditor();render()};
+document.getElementById("resetSettings").onclick=()=>{if(confirm("Restaurar os textos, cores e produtos de exemplo?")){data=structuredClone(defaultData);localStorage.removeItem("nexaVanillaData");syncEditor();render();toast("Exemplo restaurado.")}};
+document.getElementById("exportSettings").onclick=()=>{collectSettings();const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="nexa-vanilla-config.json";a.click();URL.revokeObjectURL(a.href);toast("Configuração exportada.")};
+document.getElementById("importFile").onchange=async e=>{const file=e.target.files[0];if(!file)return;try{data={...structuredClone(defaultData),...JSON.parse(await file.text())};syncEditor();render();toast("Configuração importada. Clique em Salvar alterações.")}catch(err){toast("Esse arquivo não parece ser uma configuração válida.")}e.target.value=""};
+render();
+</script>
+</body></html>
